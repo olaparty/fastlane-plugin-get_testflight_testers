@@ -29,7 +29,7 @@ module Fastlane
         spaceship_app ||= Spaceship::ConnectAPI::App.find(app_identifier)
         UI.user_error!("Couldn't find app '#{app_identifier}' on iTunes Connect") unless spaceship_app
 
-        all_testers = spaceship_app.get_beta_testers(includes: 'apps,betaTesterMetrics,betaGroups')
+        all_testers = spaceship_app.get_beta_testers(includes: 'apps,betaGroups')
         UI.success("Total testers: #{all_testers.length}  🦋")
 
         all_testers.length
