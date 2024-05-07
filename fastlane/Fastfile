@@ -1,0 +1,3 @@
+lane :test do
+  get_testflight_testers(username: "test@example.com", app_identifier: "1122334455", dry_run: true)
+end
